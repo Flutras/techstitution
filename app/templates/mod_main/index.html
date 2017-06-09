@@ -1,0 +1,41 @@
+{% extends 'layout.html' %}
+<!-- The form in HTML -->
+{% block content %}
+
+<h2>It works!</h2>
+Hey <h4>{{ names}}</h4>
+
+{% for name in names %}
+	<h1>{{name}}</h1>
+{% endfor %}
+
+
+<h2>Reports:</h2>
+<table class="table">
+    <thead>
+        <td>Emri</td>
+        <td>Mbiemri</td>
+        <td>Veprimet</td>
+    </thead>
+    <tbody>
+        {% for report in reports %}
+            <h1></h1>
+            <tr>
+                <td>{{report.firstname}}</td>
+                <td>{{report.lastname}}</td>
+                <td><a href="{{ url_for('main.remove',report_id=report._id) }}">Remove</a></td>
+                <td><a href="{{ url_for('main.show',report_id=report._id) }}">Show</a></td>
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+<form method="POST">
+  Firstname: <input type="text" name="firstname"><br/>
+  Lastname: <input type="text" name="lastname">
+  <input type="submit" value="Submit">
+</form>
+
+
+{% endblock %}
+
