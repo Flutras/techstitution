@@ -1,0 +1,394 @@
+{% extends 'layout1.html' %}
+<!-- The form in HTML -->
+{% block content %}
+
+<!-- Include jQuery -->
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+
+<!-- Include Date Range Picker -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css"/>
+
+
+<script type="text/javascript">
+$(function() {
+    // Remove button click
+    $(document).on(
+        'click',
+        '[data-role="dynamic-fields"] > .form-inline [data-role="remove"]',
+        function(e) {
+            e.preventDefault();
+            $(this).closest('.form-inline').remove();
+        }
+    );
+    // Add button click
+    $(document).on(
+        'click',
+        '[data-role="dynamic-fields"] > .form-inline [data-role="add"]',
+        function(e) {
+            e.preventDefault();
+            var container = $(this).closest('[data-role="dynamic-fields"]');
+            new_field_group = container.children().filter('.form-inline:first-child').clone();
+            new_field_group.find('input').each(function(){
+                $(this).val('');
+            });
+            container.append(new_field_group);
+        }
+    );
+
+     $(document).ready(function(){
+        var start_date_input=$('input[name="audit_start_date"]'); //our date input has the name "date"
+        var container=$('.bootstrap-iso form').length>0 ? $('.bootstrap-iso form').parent() : "body";
+        var end_date_input=$('input[name="audit_end_date"]'); //our date input has the name "date"
+        start_date_input.datepicker({
+            format: 'mm/dd/yyyy',
+            container: container,
+            todayHighlight: true,
+            autoclose: true,
+        });
+        end_date_input.datepicker({
+            format: 'mm/dd/yyyy',
+            container: container,
+            todayHighlight: true,
+            autoclose: true,
+        })
+    });
+
+
+    $('#audit_type').on('change', function() {
+        var changed = this,
+        check = changed.value.toLowerCase() === "other";
+
+      $(changed).next().toggle(check).prop('required', check);
+    }).change();
+
+    $(document).ready(function(){
+        //@naresh action dynamic childs
+        var next_exp = 0;
+            $("#add-more").click(function(e){
+                e.preventDefault();
+                var addto = "#fielda" + next_exp;
+                var addRemove = "#fielda" + (next_exp);
+                next_exp = next_exp + 1;
+                var newInp = '<div id="fielda'+ next_exp +'" name="field1'+ next_exp +'"><hr/> <div class="form-group"> <label for="csetitle">Question</label> <textarea type="text" class="form-control" id="question" name="question" placeholder="Type Question Here" cols="40" rows="5" style="resize:vertical;" required></textarea> </div> <div class="form-group"> <label for="nt">Upload Image</label> <input type="file" name="file" class="filestyle" data-iconName="glyphicon glyphicon-inbox"> </div> <div class="form-group"> <label for="options">Options</label> <div data-role="dynamic-fields"> <div class="form-inline"> <div class="form-group"> <div class="col-md-12"> <input type="radio" name="reason" value="Answer"> Answer <span>-</span> <label class="sr-only" for="field-name">Option</label> <input type="text" class="form-control" id="field-name" placeholder="Field Name"> </div> </div> <button class="btn btn-danger" data-role="remove"> <span class="glyphicon glyphicon-remove"></span> </button> <button class="btn btn-primary" data-role="add"> <span class="glyphicon glyphicon-plus"></span> </button> </div><!-- /div.form-inline --> </div> <!-- /div[data-role="dynamic-fields"] --> </div> <div class="form-group"> <label for="csetitle">Slug</label> <textarea type="text" class="form-control" id="question" name="question" placeholder="Explain You Answer" cols="40" rows="5" style="resize:vertical;" required></textarea> </div> <div class="form-group"> <label for="csetitle">Point</label> <input type="number" class="form-control" id="question" name="question" placeholder="Allocate Score Here" required><hr/></div></div>';
+                var newInput = $(newInp);
+
+                var removeBtn = '<div class="form-group"><button id="remove' + (next_exp - 1) + '" class="btn btn-danger remove-me" >Remove</button></div></div></div><div id="field">';
+                var removeButton = $(removeBtn);
+                $(addto).after(newInput);
+                $(addRemove).after(removeButton);
+                $("#fielda" + next_exp).attr('data-source',$(addto).attr('data-source'));
+                $("#count").val(next_exp);
+
+                $('.remove-me').click(function(e){
+                    e.preventDefault();
+                    var fieldNum = this.id.charAt(this.id.length-1);
+                    var fieldID = "#fielda" + fieldNum;
+                    $(this).remove();
+                    $(fieldID).remove();
+                });
+            });
+	});
+
+
+		$('#fref_num').hide();
+		$('#audit_frefnum').hide();
+		$('#chref_num').hide();
+		$('#audit_chrefnum').hide();
+		$('#audit_chrefnum').attr('required',false);
+        $('#audit_type').change(function() {
+            //This saves some time by caching the jquery value
+            var val = $(this).val();
+            //this hides any boxes that the previous selection might have left open
+            $('#fref_num').hide();
+		    $('#audit_frefnum').hide();
+		    $('#chref_num').hide();
+		    $('#audit_chrefnum').hide();
+            //This just opens the ones we want based off the selection
+            switch (val){
+                case 'Follow-up':
+                    $('#fref_num').show();
+                    $('#audit_frefnum').show();
+                    $('#audit_frefnum').attr('required',true);
+                    break;
+                case 'Change':
+                    $('#chref_num').show();
+                    $('#audit_chrefnum').show();
+                    $('#audit_chrefnum').attr('required',true);
+                    break;
+            }
+        });
+
+
+    $(document).ready(function() {
+        $("#add_onauditscope").click(function() {
+            var intId = $("#buildyourform_onauditscope div").length + 1;
+            var fieldWrapper = $("<div class=\"fieldwrapper\" id=\"field" + intId + "\"/>");
+            var fName = $("<input type=\"text\" class=\"fieldname\" placeholder=\"Type new field name here\" />");
+            var fType = $("<select class=\"fieldtype\"><option value=\"checkbox\">Checked</option><option value=\"textbox\">Text</option><option value=\"textarea\">Paragraph</option></select>");
+            var removeButton = $("<input type=\"button\" class=\"remove\" value=\"-\" />");
+            removeButton.click(function() {
+                $(this).parent().remove();
+            });
+            fieldWrapper.append(fName);
+            fieldWrapper.append(fType);
+            fieldWrapper.append(removeButton);
+            $("#buildyourform_onauditscope").append(fieldWrapper);
+        });
+        $("#preview_onauditscope").click(function() {
+            $("#yourform").remove();
+            var fieldSet = $("<fieldset id=\"yourform\"><legend>New created form</legend></fieldset>");
+            $("#buildyourform_onauditscope div").each(function() {
+                var id = "input" + $(this).attr("id").replace("field","");
+                var label = $("<label for=\"" + id + "\">" + $(this).find("input.fieldname").first().val() + "</label></br>");
+                var input;
+                switch ($(this).find("select.fieldtype").first().val()) {
+                     case "checkbox":
+                        input = $("<input type=\"checkbox\" id=\"" + id + "\" name=\"" + id + "\" />");
+                        break;
+                     case "textbox":
+                        input = $("<input type=\"text\" id=\"" + id + "\" name=\"" + id + "\" />");
+                        break;
+                     case "textarea":
+                        input = $("<textarea id=\"" + id + "\" name=\"" + id + "\" ></textarea>");
+                        break;
+                }
+                fieldSet.append(label);
+                fieldSet.append(input);
+            });
+            $(".audit_scope").append(fieldSet);
+        });
+    });
+
+    $(document).ready(function() {
+        $("#add_ondocumentreview").click(function() {
+            var intId = $("#buildyourform_ondocumentreview div").length + 1;
+            var fieldWrapper = $("<div class=\"fieldwrapper\" id=\"field" + intId + "\"/>");
+            var fName = $("<input type=\"text\" class=\"fieldname\" placeholder=\"Type new field name here\" />");
+            var fType = $("<select class=\"fieldtype\"><option value=\"checkbox\">Checked</option><option value=\"textbox\">Text</option><option value=\"textarea\">Paragraph</option></select>");
+            var removeButton = $("<input type=\"button\" class=\"remove\" value=\"-\" />");
+            removeButton.click(function() {
+                $(this).parent().remove();
+            });
+            fieldWrapper.append(fName);
+            fieldWrapper.append(fType);
+            fieldWrapper.append(removeButton);
+            $("#buildyourform_ondocumentreview").append(fieldWrapper);
+        });
+        $("#preview_ondocumentreview").click(function() {
+            $("#yourform").remove();
+            var fieldSet = $("<fieldset id=\"yourform\"><legend>New created form</legend></fieldset>");
+            $("#buildyourform_ondocumentreview div").each(function() {
+                var id = "input" + $(this).attr("id").replace("field","");
+                var label = $("<label for=\"" + id + "\">" + $(this).find("input.fieldname").first().val() + "</label>");
+                var input;
+                switch ($(this).find("select.fieldtype").first().val()) {
+                    case "checkbox":
+                        input = $("<input type=\"checkbox\" id=\"" + id + "\" name=\"" + id + "\" />");
+                        break;
+                    case "textbox":
+                        input = $("<input type=\"text\" id=\"" + id + "\" name=\"" + id + "\" />");
+                        break;
+                    case "textarea":
+                        input = $("<textarea id=\"" + id + "\" name=\"" + id + "\" ></textarea>");
+                        break;
+                }
+                fieldSet.append(label);
+                fieldSet.append(input);
+            });
+            $(".document_review").append(fieldSet);
+        });
+    });
+
+});
+
+</script>
+
+
+<div class="bootstrap-iso">
+    <div class="container add_audit_form">
+        <header class="col-xs-12 col-sm-12 col-md-12 col-lg-12" id="new_audit_header">
+	    		<a href="http://caa-ks.org">
+	    			<img src="http://caa-ks.org/wp-content/themes/caa/assets/images/logo_caa.svg" class="logo col-sm-12 col-md-8 col-lg-7">
+	    		</a>
+	    		<div class="menu-holder">
+                    <a href="http://caa-ks.org">
+	    			</a>
+                </div>
+        </header>
+        <div class="row">
+            <div class="col-md-offset-4 col-md-4">
+            <h3>Audit Managment Data</h3>
+            <form class="form" action="{{ url_for('main.add_audit_form') }}" method="POST">
+                {{ form.hidden_tag() }}
+
+                    <div class="form-group">
+                       <label for="ref_num">Reference number</label>
+                       <input type="number" class="form-control" id="audit_ref_num" name="audit_ref_num" placeholder="Type reference number here" cols="40" rows="5" style="resize:vertical;" required>
+                    </div>
+
+                    <div class="form-group">
+                       <label for="title">Audit Title</label>
+                        <input type="text" class="form-control" id="audit_title" name="audit_title" placeholder="Type title here" cols="40" rows="5" style="resize:vertical;" required>
+                    </div>
+
+                    <div class="form-group">
+                       <label for="type">Audit Type</label>
+                         <select id="audit_type" name="audit_type" class="form-control" required>
+                          <option value="Audit">Audit</option>
+                          <option value="Inspection">Inspection</option>
+                          <option value="Ad-hoc-Inspection">Ad-hoc Inspection</option>
+                          <option value="Follow-up">Follow-up</option>
+                          <option value="Change">Change</option>
+                          <option value="Unannounced">Unannounced</option>
+                          <option value="Other">Other</option>
+                        </select>
+                        <input type="text" class="form-control" />
+                    </div>
+
+                    <div class="form-group">
+                       <label for="start_date">Audit Start Date</label>
+                         <div class="input-group">
+                           <div class="input-group-addon">
+                            <i class="fa fa-calendar">
+                            </i>
+                           </div>
+                           <input class="form-control" id="audit_start_date" name="audit_start_date" placeholder="MM/DD/YYYY" type="text" required/>
+                          </div>
+                    </div>
+
+                    <div class="form-group">
+                       <label for="end_date">Audit End Date</label>
+                         <div class="input-group">
+                           <div class="input-group-addon">
+                            <i class="fa fa-calendar">
+                            </i>
+                           </div>
+                           <input class="form-control" id="audit_end_date" name="audit_end_date" placeholder="MM/DD/YYYY" type="text" required/>
+                          </div>
+                    </div>
+
+                    <div class="form-group">
+                       <label for="auditee">Auditee</label>
+                        <input type="text" class="form-control" id="audit_auditee" name="audit_auditee" placeholder="Type auditee here" cols="40" rows="5" style="resize:vertical;" required>
+                    </div>
+
+                    <div class="form-group">
+                       <label for="place">Place</label>
+                        <input type="text" class="form-control" id="audit_place" name="audit_place" placeholder="Type place here" cols="40" rows="5" style="resize:vertical;" required>
+                    </div>
+
+                    <div class="form-group">
+                       <label id="fref_num" for="frefnum">Follow-up reference number</label>
+                        <input type="number" class="form-control" id="audit_frefnum" name="audit_frefnum" placeholder="Type follow-up reference number here" cols="40" rows="5" style="resize:vertical;">
+                    </div>
+
+                    <div class="form-group">
+                       <label id="chref_num" for="chrefnum">Change reference number</label>
+                        <input type="number" class="form-control" id="audit_chrefnum" name="audit_chrefnum" placeholder="Type changed reference number here" cols="40" rows="5" style="resize:vertical;">
+                    </div>
+
+                    <div class="form-group">
+                       <label for="audit_teamleader">Audit Team Leader</label>
+                        <input type="text" class="form-control" id="audit_tl" name="audit_tl" placeholder="Type audit team leader here" cols="40" rows="5" style="resize:vertical;" required>
+                    </div>
+
+                    <div class="form-group">
+                       <label for="audit_teamembers">Audit Team Members</label>
+                        <input type="text" class="form-control" id="audit_tm" name="audit_tm" placeholder="Type audit team members here" cols="40" rows="5" style="resize:vertical;" required>
+                    </div>
+
+                    <div class="form-group">
+                       <label for="auditee_participants">Auditee Participants</label>
+                        <input type="text" class="form-control" id="audit_ap" name="audit_ap" placeholder="Type auditee participants here" cols="40" rows="5" style="resize:vertical;" required>
+                    </div>
+
+
+                    <div class="form-group">
+                       <label for="organization">Organization</label>
+                       <input type="text" class="form-control" id="audit_organization" name="audit_organization" placeholder="Type organization here" cols="40" rows="5" style="resize:vertical;" required>
+                    </div>
+
+                    <div id="fielda">
+                        <div id="fielda0">
+                                <!-- Text input-->
+                                    <hr/>
+                                  <!--<div class="form-group">
+                                       <label for="csetitle">Comments</label>
+                                       <textarea type="text" class="form-control" id="comment" name="warning" placeholder="Type your comments here" cols="40" rows="5" style="resize:vertical;" required></textarea>
+                                    </div>-->
+                                    <!--<div class="form-group">
+                                      <label for="nt">Upload Document</label>
+                                      <input type="file" name="file" class="filestyle" data-iconName="glyphicon glyphicon-inbox">
+                                    </div>-->
+                                    <!--<div class="form-group">
+                                        <label for="options">Options</label>
+                                        <div data-role="dynamic-fields">
+                                            <div class="form-inline">
+                                                <div class="form-group">
+                                                    <div class="col-md-12">
+                                                        <input type="radio" name="reason" value="Answer"> Answer
+                                                        <span>-</span>
+                                                        <label class="sr-only" for="field-name">Option</label>
+                                                        <input type="text" class="form-control" id="field-name" placeholder="Field Name">
+                                                    </div>
+                                                </div>
+                                                <button class="btn btn-danger" data-role="remove">
+                                                    <span class="glyphicon glyphicon-remove"></span>
+                                                </button>
+                                                <button class="btn btn-primary" data-role="add">
+                                                    <span class="glyphicon glyphicon-plus"></span>
+                                                </button>
+                                            </div>  &lt;!&ndash; /div.form-inline &ndash;&gt;
+                                        </div>  &lt;!&ndash; /div[data-role="dynamic-fields"] &ndash;&gt;
+                                    </div>-->
+
+                                   <!-- <div class="form-group">
+                                       <label for="csetitle">Point</label>
+                                       <input type="number" class="form-control" id="question" name="point" placeholder="Allocate Score Here" required>
+                                       <hr/>
+                                    </div>-->
+                        </div>
+                        <!--end field-->
+                    </div>
+
+                    <div class="audit_scope">
+                        <div id="field_audit_scope">
+                             <hr/>
+                            <h3>Audit Scope</h3>
+                        </div>
+                        <fieldset id="buildyourform_onauditscope">
+                            <legend>Build your own form!</legend>
+                        </fieldset>
+                            <input type="button" value="Preview form" class="add"  id="preview_onauditscope" />
+                            <input type="button" value="Add a field" class="add" id="add_onauditscope" />
+                    </div>
+                    <!--end audit scope-->
+
+                    <div class="document_review">
+                        <div id="field_document_review">
+                             <hr/>
+                            <h3>Document Review</h3>
+                        </div>
+
+                        <fieldset id="buildyourform_ondocumentreview">
+                            <legend>Build your own form!</legend>
+                        </fieldset>
+                            <input type="button" value="Preview form" class="add" id="preview_ondocumentreview" />
+                            <input type="button" value="Add a field" class="add" id="add_ondocumentreview" />
+                    </div>
+                    <!--end document review-->
+
+                    <hr/>
+                    <hr/>
+
+                 <div class="form-group">
+                     <input type="submit" value="Submit">
+                 </div>
+
+            </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

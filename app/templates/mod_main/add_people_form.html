@@ -1,0 +1,82 @@
+{% extends 'layout.html' %}
+<!-- The form in HTML -->
+{% block content %}
+<script type="text/javascript">
+$(function() {
+    // Remove button click
+    $(document).on(
+        'click',
+        '[data-role="dynamic-fields"] > .form-inline [data-role="remove"]',
+        function(e) {
+            e.preventDefault();
+            $(this).closest('.form-inline').remove();
+        }
+    );
+    // Add button click
+    $(document).on(
+        'click',
+        '[data-role="dynamic-fields"] > .form-inline [data-role="add"]',
+        function(e) {
+            e.preventDefault();
+            var container = $(this).closest('[data-role="dynamic-fields"]');
+            new_field_group = container.children().filter('.form-inline:first-child').clone();
+            new_field_group.find('input').each(function(){
+                $(this).val('');
+            });
+            container.append(new_field_group);
+        }
+    );
+});
+
+
+    	$(document).ready(function(){
+        //@naresh action dynamic childs
+        var next_exp = 0;
+            $("#add-more").click(function(e){
+                e.preventDefault();
+                var addto = "#fielda" + next_exp;
+                var addRemove = "#fielda" + (next_exp);
+                next_exp = next_exp + 1;
+                var newInp = '<div id="fielda'+ next_exp +'" name="field1'+ next_exp +'"><hr/> <div class="form-group"> <label for="csetitle">Question</label> <textarea type="text" class="form-control" id="question" name="question" placeholder="Type Question Here" cols="40" rows="5" style="resize:vertical;" required></textarea> </div> <div class="form-group"> <label for="nt">Upload Image</label> <input type="file" name="file" class="filestyle" data-iconName="glyphicon glyphicon-inbox"> </div> <div class="form-group"> <label for="options">Options</label> <div data-role="dynamic-fields"> <div class="form-inline"> <div class="form-group"> <div class="col-md-12"> <input type="radio" name="reason" value="Answer"> Answer <span>-</span> <label class="sr-only" for="field-name">Option</label> <input type="text" class="form-control" id="field-name" placeholder="Field Name"> </div> </div> <button class="btn btn-danger" data-role="remove"> <span class="glyphicon glyphicon-remove"></span> </button> <button class="btn btn-primary" data-role="add"> <span class="glyphicon glyphicon-plus"></span> </button> </div><!-- /div.form-inline --> </div> <!-- /div[data-role="dynamic-fields"] --> </div> <div class="form-group"> <label for="csetitle">Slug</label> <textarea type="text" class="form-control" id="question" name="question" placeholder="Explain You Answer" cols="40" rows="5" style="resize:vertical;" required></textarea> </div> <div class="form-group"> <label for="csetitle">Point</label> <input type="number" class="form-control" id="question" name="question" placeholder="Allocate Score Here" required><hr/></div></div>';
+                var newInput = $(newInp);
+
+                var removeBtn = '<div class="form-group"><button id="remove' + (next_exp - 1) + '" class="btn btn-danger remove-me" >Remove</button></div></div></div><div id="field">';
+                var removeButton = $(removeBtn);
+                $(addto).after(newInput);
+                $(addRemove).after(removeButton);
+                $("#fielda" + next_exp).attr('data-source',$(addto).attr('data-source'));
+                $("#count").val(next_exp);
+
+                    $('.remove-me').click(function(e){
+                        e.preventDefault();
+                        var fieldNum = this.id.charAt(this.id.length-1);
+                        var fieldID = "#fielda" + fieldNum;
+                        $(this).remove();
+                        $(fieldID).remove();
+                    });
+            });
+		});
+
+</script>
+
+
+
+<div class="container">
+        <div class="col-md-4">
+            <form class="form" action="{{ url_for('main.add_people_form') }}" method="POST" id="myform">
+                {{ form.hidden_tag() }}
+                    <div class="form-group">
+                       <label for="title">Firstname</label>
+                       <input type="text" class="form-control" id="firstname" name="firstname" placeholder="Type firstname here" cols="40" rows="5" style="resize:vertical;" required>
+                    </div>
+                    <div class="form-group">
+                       <label for="title">Lastname</label>
+                       <input type="text" class="form-control" id="lastname" name="lastname" placeholder="Type lastname here" cols="40" rows="5" style="resize:vertical;" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" value="Submit">
+                    </div>
+            </form>
+        </div>
+    </div>
+{% endblock %}

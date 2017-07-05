@@ -1,0 +1,87 @@
+body{
+    margin-top:0px;
+    margin-bottom:0px;
+}
+
+.dashboard .navbar-brand >img{
+    display:block;
+    margin-left:-170px;
+}
+
+.corrective_actions .navbar-brand >img{
+    display:block;
+    margin-left:-170px;
+}
+
+.blank_page .navbar-brand >img{
+    display:block;
+    margin-left:-170px;
+}
+
+.navbar-fixed-top{
+    padding:0px;
+    }
+
+.dashboard, .corrective_actions, .login{
+    background-color:#FFF;
+    width:100%;
+    height:100%;
+}
+
+.col-md-4 >a >img{
+    width:400px;
+    height:70px;
+    position:center;
+}
+.navbar-header{
+    height:100px;
+}
+
+.navbar-header >a >img{
+    width:900px;
+    height:70px;
+    background-color:#ffffff;
+}
+.navbar-header{
+    padding-left:5px;
+    padding-top:5px;
+    padding-bottom:5px;
+}
+
+.navbar-inverse{
+    background-color:#ffffff;
+}
+
+.navbar-fixed-top .side-nav{
+    top:100px;
+}
+
+.top-nav{
+    margin:20px 20px;
+}
+
+#new_audit_header,#audit_details_header,#new_nc_header,#new_ca_header{
+  padding-left:200px;
+  margin-top:15px;
+}
+
+#login_header{
+  margin-top:15px;
+  margin-bottom:25px;
+}
+
+.add_audit_form,.audit_details,.add_nc_form,.add_ca_form{
+    width:100%;
+    height:100%;
+    margin:0px;
+    background-color:#ffffff;
+}
+
+#add_button,#search_button{
+    float:right;
+    margin-bottom:5px;
+
+}
+#add_button{
+    margin-left:5px;
+}

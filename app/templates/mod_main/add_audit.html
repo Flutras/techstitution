@@ -1,0 +1,90 @@
+{% extends 'layout.html' %}
+<!-- The form in HTML -->
+{% block content %}
+
+<script type="text/javascript">
+    $(document).ready(function(){
+
+        $('form').on('submit',function(e){
+            // Submit logic.
+            // Build json data
+            // Do an AJAX call
+             // Add row dynamically
+            $ajax({
+                type:'POST',
+                url:'{{ url_for("main.add_audit") }}',
+                data:$('form').serialize(),
+                success: function (data) {
+                    console.log(data)  // display the returned data in the console.
+                }
+            });
+            e.preventDefault();
+        });
+
+        $('form').on('submit',function(e){
+            // Submit logic.
+            // Build json data
+            // Do an AJAX call
+             // Add row dynamically
+            $ajax({
+                type:'POST',
+                url:'{{ url_for("main.add_audit") }}',
+                data:$('form').serialize(),
+                success: function (data) {
+                    console.log(data)  // display the returned data in the console.
+                }
+            });
+            e.preventDefault();
+        });
+
+
+    });
+</script>
+
+<div class="container">
+    <div class="col-md-12">
+        <h2>Shto Auditimin</h2>
+
+        <br>
+
+        {% for message in form.audit_title.errors %}
+                 <div>{{ message }}</div>
+        {% endfor %}
+
+        {% for message in form.audit_ref_num.errors %}
+                 <div>{{ message }}</div>
+        {% endfor %}
+
+        {% for message in form.audit_start_date.errors %}
+                 <div>{{ message }}</div>
+        {% endfor %}
+
+        <!--Kjo eshte nje menyre se si me i bo labelat edhe fushat duke i perdorur format e krijuara ne WTforms-->
+        <form id="audit_form" action="{{ url_for('main.add_audit')}}" method="POST">
+            {{ form.hidden_tag() }}
+
+            <div style="font-size:14px; margin-left:150px">
+               <div class="form-group">
+                       <label for="title">Title</label>
+                       <input type="text" class="form-control" id="audit_title" name="audit_title" placeholder="Type audit title here" cols="40" rows="5" style="resize:vertical;" required>
+                    </div>
+                    <div class="form-group">
+                       <label for="ref_num">Reference Number</label>
+                       <input type="text" class="form-control" id="audit_ref_num" name="audit_ref_num" placeholder="Type reference number here" cols="40" rows="5" style="resize:vertical;" required>
+                    </div>
+                    <div class="form-group">
+                       <label for="date">Audit Start Date</label>
+                       <input type="text" class="form-control" id="audit_start_date" name="audit_start_date" placeholder="Type start date here" cols="40" rows="5" style="resize:vertical;" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" value="Submit">
+                    </div>
+            </div>
+
+        </form>
+    </div>
+</div>
+
+
+
+{% endblock %}

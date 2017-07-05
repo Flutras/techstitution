@@ -1,40 +1,104 @@
+
 {% extends 'layout.html' %}
 <!-- The form in HTML -->
 {% block content %}
 
-<h2>It works!</h2>
-Hey <h4>{{ names}}</h4>
 
-{% for name in names %}
-	<h1>{{name}}</h1>
-{% endfor %}
+<script type="text/javascript">
+    $(document).ready(function(){
+        $(document).on('click', '.remove', function(){
+            alert('Are you sure you  want to remove this register!');
+            var report_id = this.id;
+            $.ajax({
+                url: '{{ url_for("main.remove_report") }}',
+                data: {
+                    "id": report_id
+                },
+                type: 'POST',
+                success: function(response) {
+                    $('#'+report_id).parent().parent().remove();
+                }
+            });
+        });
 
 
-<h2>Reports:</h2>
-<table class="table">
-    <thead>
-        <td>Emri</td>
-        <td>Mbiemri</td>
-        <td>Veprimet</td>
-    </thead>
-    <tbody>
-        {% for report in reports %}
-            <h1></h1>
-            <tr>
-                <td>{{report.firstname}}</td>
-                <td>{{report.lastname}}</td>
-                <td><a href="{{ url_for('main.remove',report_id=report._id) }}">Remove</a></td>
-                <td><a href="{{ url_for('main.show',report_id=report._id) }}">Show</a></td>
-            </tr>
+        $('.form').on('submit', function(e){
+            e.preventDefault();
+            $.ajax({
+                type:'POST',
+                url:'{{ url_for("main.add_people") }}',
+                data:$('form').serialize(),
+                success: function (data) {
+                    console.log(data);
+                    $('.table').append('<tr>' +
+                    '<td>'+data['firstname']+'</td>' +
+                    '<td>'+data['lastname']+'</td>' +
+                    '<td>'+'<a class="remove" id='+data['_id']['$oid']+'>Remove</a>'+'</td>'+
+                    '<td>'+'<a class="show" id='+data['_id']['$oid']+'>Show</a>'+'</td>'+
+                    '</tr>');
+                }
+            });
+        });
+    });
+</script>
+
+<div class="container">
+    <div class="col-md-12">
+        <h2>Lista e perdoruesve</h2>
+
+        <a href="{{ url_for('main.add_people_form')}}" class="glyphicon glyphicon-plus" aria-hidden="true"></a>
+        <br/>
+        <table class="table table-striped">
+            <thead bgcolor="#f4e8eb">
+                <tr>
+                    <th>Firstname</th>
+                    <th>Lastname</th>
+                    <th>Action</th>
+                    <th>View</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for report in reports %}
+                    <tr>
+                        <td>{{report.firstname}}</td>
+                        <td>{{report.lastname}}</td>
+                        <td>
+                            <a class="remove" id="{{report._id}}">Remove</a>
+                        </td>
+                        <td><a href="{{ url_for('main.show_report',report_id=report._id) }}">Show</a></td>
+
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+        <br>
+
+        {% for message in form.firstname.errors %}
+                 <div>{{ message }}</div>
         {% endfor %}
-    </tbody>
-</table>
 
-<form method="POST">
-  Firstname: <input type="text" name="firstname"><br/>
-  Lastname: <input type="text" name="lastname">
-  <input type="submit" value="Submit">
-</form>
+        {% for message in form.lastname.errors %}
+                 <div>{{ message }}</div>
+        {% endfor %}
+
+
+
+        <form class="form" action="{{ url_for('main.index') }}" method="POST">
+            {{ form.hidden_tag() }}
+
+            <div style="font-size:14px; margin-left:150px">
+                {{ render_field(form.firstname) }}
+             <!--   {{ form.firstname }}<br>-->
+             <!--   {{ form.lastname.label }}-->
+                {{ render_field(form.lastname) }}
+                <input type="submit" value="Submit">
+            </div>
+
+        </form>
+    </div>
+</div>
+
 
 
 {% endblock %}

@@ -1,0 +1,331 @@
+{% extends 'layout1.html' %}
+<!-- The form in HTML -->
+{% block content %}
+
+<!-- Include jQuery -->
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+
+<!-- Include Date Range Picker -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css"/>
+
+
+<script type="text/javascript">
+$(function() {
+    // Remove button click
+    $(document).on(
+        'click',
+        '[data-role="dynamic-fields"] > .form-inline [data-role="remove"]',
+        function(e) {
+            e.preventDefault();
+            $(this).closest('.form-inline').remove();
+        }
+    );
+    // Add button click
+    $(document).on(
+        'click',
+        '[data-role="dynamic-fields"] > .form-inline [data-role="add"]',
+        function(e) {
+            e.preventDefault();
+            var container = $(this).closest('[data-role="dynamic-fields"]');
+            new_field_group = container.children().filter('.form-inline:first-child').clone();
+            new_field_group.find('input').each(function(){
+                $(this).val('');
+            });
+            container.append(new_field_group);
+        }
+    );
+
+
+     $(document).ready(function(){
+        var start_date_input=$('input[name="audit_start_date"]'); //our date input has the name "date"
+        var container=$('.bootstrap-iso form').length>0 ? $('.bootstrap-iso form').parent() : "body";
+        var end_date_input=$('input[name="audit_end_date"]'); //our date input has the name "date"
+        start_date_input.datepicker({
+            format: 'mm/dd/yyyy',
+            container: container,
+            todayHighlight: true,
+            autoclose: true,
+        });
+        end_date_input.datepicker({
+            format: 'mm/dd/yyyy',
+            container: container,
+            todayHighlight: true,
+            autoclose: true,
+        })
+    });
+
+
+    $('#audit_type').on('change', function() {
+        var changed = this,
+        check = changed.value.toLowerCase() === "other";
+
+      $(changed).next().toggle(check).prop('required', check);
+    }).change();
+
+    $(document).ready(function(){
+        //@naresh action dynamic childs
+        var next_exp = 0;
+            $("#add-more").click(function(e){
+                e.preventDefault();
+                var addto = "#fielda" + next_exp;
+                var addRemove = "#fielda" + (next_exp);
+                next_exp = next_exp + 1;
+                var newInp = '<div id="fielda'+ next_exp +'" name="field1'+ next_exp +'"><hr/> <div class="form-group"> <label for="csetitle">Question</label> <textarea type="text" class="form-control" id="question" name="question" placeholder="Type Question Here" cols="40" rows="5" style="resize:vertical;" required></textarea> </div> <div class="form-group"> <label for="nt">Upload Image</label> <input type="file" name="file" class="filestyle" data-iconName="glyphicon glyphicon-inbox"> </div> <div class="form-group"> <label for="options">Options</label> <div data-role="dynamic-fields"> <div class="form-inline"> <div class="form-group"> <div class="col-md-12"> <input type="radio" name="reason" value="Answer"> Answer <span>-</span> <label class="sr-only" for="field-name">Option</label> <input type="text" class="form-control" id="field-name" placeholder="Field Name"> </div> </div> <button class="btn btn-danger" data-role="remove"> <span class="glyphicon glyphicon-remove"></span> </button> <button class="btn btn-primary" data-role="add"> <span class="glyphicon glyphicon-plus"></span> </button> </div><!-- /div.form-inline --> </div> <!-- /div[data-role="dynamic-fields"] --> </div> <div class="form-group"> <label for="csetitle">Slug</label> <textarea type="text" class="form-control" id="question" name="question" placeholder="Explain You Answer" cols="40" rows="5" style="resize:vertical;" required></textarea> </div> <div class="form-group"> <label for="csetitle">Point</label> <input type="number" class="form-control" id="question" name="question" placeholder="Allocate Score Here" required><hr/></div></div>';
+                var newInput = $(newInp);
+
+                var removeBtn = '<div class="form-group"><button id="remove' + (next_exp - 1) + '" class="btn btn-danger remove-me" >Remove</button></div></div></div><div id="field">';
+                var removeButton = $(removeBtn);
+                $(addto).after(newInput);
+                $(addRemove).after(removeButton);
+                $("#fielda" + next_exp).attr('data-source',$(addto).attr('data-source'));
+                $("#count").val(next_exp);
+
+                $('.remove-me').click(function(e){
+                    e.preventDefault();
+                    var fieldNum = this.id.charAt(this.id.length-1);
+                    var fieldID = "#fielda" + fieldNum;
+                    $(this).remove();
+                    $(fieldID).remove();
+                });
+            });
+	});
+
+
+		$('#fref_num').hide();
+		$('#audit_frefnum').hide();
+		$('#chref_num').hide();
+		$('#audit_chrefnum').hide();
+        $('#audit_type').change(function() {
+            //This saves some time by caching the jquery value
+            var val = $(this).val();
+            //this hides any boxes that the previous selection might have left open
+
+            //This just opens the ones we want based off the selection
+            switch (val){
+                case 'Follow-up':
+                    $('#fref_num').show();
+                    $('#audit_frefnum').show();
+                    $('#audit_frefnum').attr('required',true);
+                    break;
+                case 'Change':
+                    $('#chref_num').show();
+                    $('#audit_chrefnum').show();
+                    $('#audit_chrefnum').attr('required',true);
+                    break;
+            }
+        });
+
+});
+
+</script>
+
+
+<div class="bootstrap-iso">
+    <div class="container audit_details">
+        <header class="col-xs-12 col-sm-12 col-md-12 col-lg-12" id="audit_details_header">
+	    		<a href="http://caa-ks.org">
+	    			<img src="http://caa-ks.org/wp-content/themes/caa/assets/images/logo_caa.svg" class="logo col-sm-12 col-md-8 col-lg-7">
+	    		</a>
+	    		<div class="menu-holder">
+	    			    			<a href="http://caa-ks.org">
+	    			</a>
+                </div>
+        </header>
+        <div class="row">
+            <div class="col-md-offset-4 col-md-4">
+            <h3>Audit Details</h3>
+            <form class="form" action="{{ url_for('main.show_audit',audit_id=audit._id) }}" method="GET">
+                {{ form.hidden_tag() }}
+                    <tbody>
+
+                        <tr>
+                            <div>
+                                Audit title:
+                                <span class="display">{{audit.audit_title}}</span>
+                                <input type="text" id="audit_title" name="audit_title" class="edit" style="display:none" />
+                            </div>
+                        </tr>
+
+                        <tr>
+                            <div>
+                                Organization:
+                                <span class="display">{{audit.audit_organization}}</span>
+                                <input type="text" id="audit_organization" name="audit_organization" class="edit" style="display:none" />
+                            </div>
+                        </tr>
+
+                        <tr>
+                            <div>
+                                Reference number:
+                                <span class="display">{{audit.audit_ref_num}}</span>
+                                <input type="text" id="audit_ref_num" name="audit_ref_num" class="edit" style="display:none" />
+                            </div>
+                        </tr>
+
+                        <tr>
+                            <div>
+                                Audit type:
+                                <span class="display">{{audit.audit_type}}</span>
+                                <input type="text" id="audit_type" name="audit_type" class="edit" style="display:none" />
+                            </div>
+                        </tr>
+
+                        <tr>
+                            <div>
+                                Audit start date:
+                                <span class="display">{{audit.audit_start_date}}</span>
+                                <input type="text" id="audit_start_date" name="audit_start_date" class="edit" style="display:none" />
+                            </div>
+                        </tr>
+
+                        <tr>
+                            <div>
+                                Audit end date:
+                                <span class="display">{{audit.audit_end_date}}</span>
+                                <input type="text" id="audit_end_date" name="audit_end_date" class="edit" style="display:none" />
+                            </div>
+                        </tr>
+
+
+                        <tr>
+                            <div>
+                                Auditee:
+                                <span class="display">{{audit.audit_auditee}}</span>
+                                <input type="text" id="audit_auditee" name="audit_auditee" class="edit" style="display:none" />
+                            </div>
+                        </tr>
+
+                        <tr>
+                            <div>
+                                Place:
+                                <span class="display">{{audit.audit_place}}</span>
+                                <input type="text" id="audit_place" name="audit_place" class="edit" style="display:none" />
+                            </div>
+                        </tr>
+
+                        <tr>
+                            <div>
+                                Follow-up reference number:
+                                <span class="display">{{audit.audit_frefnum}}</span>
+                                <input type="text" id="audit_frefnum" name="audit_frefnum" class="edit" style="display:none" />
+                            </div>
+                        </tr>
+
+                        <tr>
+                            <div>
+                                Change reference number:
+                                <span class="display">{{audit.audit_chrefnum}}</span>
+                                <input type="text" id="audit_chrefnum" name="audit_chrefnum" class="edit" style="display:none" />
+                            </div>
+                        </tr>
+
+                        <tr>
+                            <div>
+                                Audit team leader:
+                                <span class="display">{{audit.audit_tl}}</span>
+                                <input type="text" id="audit_tl" name="audit_tl" class="edit" style="display:none" />
+                            </div>
+                        </tr>
+
+                        <tr>
+                            <div>
+                                Audit team members:
+                                <span class="display">{{audit.audit_tm}}</span>
+                                <input type="text" id="audit_tm" name="audit_tm" class="edit" style="display:none" />
+                            </div>
+                        </tr>
+
+                        <tr>
+                            <div>
+                                Auditee participants:
+                                <span class="display">{{audit.audit_ap}}</span>
+                                <input type="text" id="audit_ap" name="audit_ap" class="edit" style="display:none" />
+                            </div>
+                        </tr>
+
+
+
+                    </tbody>
+                </br>
+
+                    <hr/>
+                    <hr/>
+
+                <div class="form-group">
+                     <a type="button" href="{{url_for('main.edit_audit', audit_id=audit._id)}}">Edit</a>
+                </div>
+
+                <div class="form-group">
+                     <a type="button" href="{{url_for('main.index')}}">Go back to dashboard</a>
+                </div>
+
+            </form>
+
+            </div>
+        </div>
+
+      <!--Nonconformities list here-->
+                <div class="row">
+                    <div class="nonconformities_table">
+                    <h3>Nonconformities History</h3>
+                        <br>
+                        <button type="button" id="add_button" title="Add New Nonconformity" onclick="window.location.href='{{url_for('main.add_nc_form',audit_id=audit._id)}}'" class="btn btn-primary btn-circle"><i class="glyphicon glyphicon-plus"></i></button>
+                        <button type="button" id="search_button" title="Search"  class="btn btn-primary btn-circle"><i class="glyphicon glyphicon-search"></i></button>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="panel panel-primary">
+                                        <div class="panel-heading">
+                                            <h3 class="panel-title"></h3>
+                                            <div class="pull-right">
+
+                                                <span class="clickable filter" data-toggle="tooltip" title="Toggle table filter" data-container="body">
+                                                    <i class="glyphicon glyphicon-filter"></i>
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="panel-body">
+                                            <input type="text" class="form-control" id="dev-table-filter" data-action="filter" data-filters="#dev-table" placeholder="Filter of audits" />
+                                        </div>
+                                        <table class="table table-hover" id="dev-table">
+                                            <thead>
+                                                <tr>
+                                                    <th>#</th>
+                                                    <th>Title</th>
+                                                    <th>Operator Auditee</th>
+                                                    <th>Number</th>
+                                                    <th>Status</th>
+                                                    <th>Action</th>
+                                                </tr>
+                                            </thead>
+                                                <tbody>
+                                                    {% for nc in audit.nonconformities %}
+                                                        <tr>
+                                                            <td></td>
+                                                            <td>{{nc.nc_title}}</td>
+                                                            <td>{{nc.nc_operator_auditee}}</td>
+                                                            <td>{{nc.nc_number}}</td>
+                                                            <td>{{nc.nc_status}}</td>
+                                                            <td>
+
+                                                                <form id="link_button" style="display: inline" action="{{ url_for('main.show_nonconformity',audit_id=audit._id) }}" method="get">
+                                                                  <button title="View/Edit Nonconformity"><span class="glyphicon glyphicon-eye-open"></span></button>
+                                                                </form>
+                                                                <!--<a href="{{ url_for('main.show_audit',audit_id=audit._id) }}" class="button" title="View Audit"><span class="glyphicon glyphicon-eye-open"></span></a>-->
+                                                                <button type="button" class="remove" title="Delete" id="{{audit._id}}"><span class="glyphicon glyphicon-trash"></span></button>
+                                                            </td>
+                                                        </tr>
+                                                    {% endfor %}
+                                                </tbody>
+                                        </table>
+                                    </div>
+
+                                </div>
+                            </div>
+                    </div>
+                </div>
+
+    </div>
+</div>
+
+{% endblock %}

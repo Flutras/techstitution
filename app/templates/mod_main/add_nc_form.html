@@ -1,0 +1,243 @@
+{% extends 'layout1.html' %}
+<!-- The form in HTML -->
+{% block content %}
+
+<!-- Include jQuery -->
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+
+<!-- Include Date Range Picker -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css"/>
+
+
+<script type="text/javascript">
+$(function() {
+    // Remove button click
+    $(document).on(
+        'click',
+        '[data-role="dynamic-fields"] > .form-inline [data-role="remove"]',
+        function(e) {
+            e.preventDefault();
+            $(this).closest('.form-inline').remove();
+        }
+    );
+    // Add button click
+    $(document).on(
+        'click',
+        '[data-role="dynamic-fields"] > .form-inline [data-role="add"]',
+        function(e) {
+            e.preventDefault();
+            var container = $(this).closest('[data-role="dynamic-fields"]');
+            new_field_group = container.children().filter('.form-inline:first-child').clone();
+            new_field_group.find('input').each(function(){
+                $(this).val('');
+            });
+            container.append(new_field_group);
+        }
+    );
+
+     $(document).ready(function(){
+        var nc_date_input=$('input[name="nc_date"]'); //our date input has the name "nc_date"
+        var container=$('.bootstrap-iso form').length>0 ? $('.bootstrap-iso form').parent() : "body";
+        var nc_agreed_date_for_CAP_input=$('input[name="nc_agreed_date_for_CAP"]'); //our date input has the name "date"
+        var nc_due_date_input=$('input[name="nc_due_date"]');
+        var nc_closure_date_input=$('input[name="nc_closure_date"]');
+        nc_date_input.datepicker({
+            format: 'mm/dd/yyyy',
+            container: container,
+            todayHighlight: true,
+            autoclose: true,
+        });
+        nc_agreed_date_for_CAP_input.datepicker({
+            format: 'mm/dd/yyyy',
+            container: container,
+            todayHighlight: true,
+            autoclose: true,
+        });
+        nc_due_date_input.datepicker({
+            format: 'mm/dd/yyyy',
+            container: container,
+            todayHighlight: true,
+            autoclose: true,
+        });
+        nc_closure_date_input.datepicker({
+            format: 'mm/dd/yyyy',
+            container: container,
+            todayHighlight: true,
+            autoclose: true,
+        })
+
+    });
+
+
+    $(document).ready(function(){
+        //@naresh action dynamic childs
+        var next_exp = 0;
+            $("#add-more").click(function(e){
+                e.preventDefault();
+                var addto = "#fielda" + next_exp;
+                var addRemove = "#fielda" + (next_exp);
+                next_exp = next_exp + 1;
+                var newInp = '<div id="fielda'+ next_exp +'" name="field1'+ next_exp +'"><hr/> <div class="form-group"> <label for="csetitle">Question</label> <textarea type="text" class="form-control" id="question" name="question" placeholder="Type Question Here" cols="40" rows="5" style="resize:vertical;" required></textarea> </div> <div class="form-group"> <label for="nt">Upload Image</label> <input type="file" name="file" class="filestyle" data-iconName="glyphicon glyphicon-inbox"> </div> <div class="form-group"> <label for="options">Options</label> <div data-role="dynamic-fields"> <div class="form-inline"> <div class="form-group"> <div class="col-md-12"> <input type="radio" name="reason" value="Answer"> Answer <span>-</span> <label class="sr-only" for="field-name">Option</label> <input type="text" class="form-control" id="field-name" placeholder="Field Name"> </div> </div> <button class="btn btn-danger" data-role="remove"> <span class="glyphicon glyphicon-remove"></span> </button> <button class="btn btn-primary" data-role="add"> <span class="glyphicon glyphicon-plus"></span> </button> </div><!-- /div.form-inline --> </div> <!-- /div[data-role="dynamic-fields"] --> </div> <div class="form-group"> <label for="csetitle">Slug</label> <textarea type="text" class="form-control" id="question" name="question" placeholder="Explain You Answer" cols="40" rows="5" style="resize:vertical;" required></textarea> </div> <div class="form-group"> <label for="csetitle">Point</label> <input type="number" class="form-control" id="question" name="question" placeholder="Allocate Score Here" required><hr/></div></div>';
+                var newInput = $(newInp);
+
+                var removeBtn = '<div class="form-group"><button id="remove' + (next_exp - 1) + '" class="btn btn-danger remove-me" >Remove</button></div></div></div><div id="field">';
+                var removeButton = $(removeBtn);
+                $(addto).after(newInput);
+                $(addRemove).after(removeButton);
+                $("#fielda" + next_exp).attr('data-source',$(addto).attr('data-source'));
+                $("#count").val(next_exp);
+
+                $('.remove-me').click(function(e){
+                    e.preventDefault();
+                    var fieldNum = this.id.charAt(this.id.length-1);
+                    var fieldID = "#fielda" + fieldNum;
+                    $(this).remove();
+                    $(fieldID).remove();
+                });
+            });
+	});
+
+});
+
+</script>
+
+
+<div class="bootstrap-iso">
+    <div class="container add_nc_form">
+        <header class="col-xs-12 col-sm-12 col-md-12 col-lg-12" id="new_nc_header">
+	    		<a href="http://caa-ks.org">
+	    			<img src="http://caa-ks.org/wp-content/themes/caa/assets/images/logo_caa.svg" class="logo col-sm-12 col-md-8 col-lg-7">
+	    		</a>
+	    		<div class="menu-holder">
+                    <a href="http://caa-ks.org">
+	    			</a>
+                </div>
+        </header>
+        <div class="row">
+            <div class="col-md-offset-4 col-md-4">
+                <hr>
+            <h3>New Nonconformity</h3>
+            <form class="form" action="{{ url_for('main.add_nc_form', audit_id=audit._id) }}" method="POST">
+                {{ form.hidden_tag() }}
+
+                    <div class="form-group">
+                       <label for="title">Title</label>
+                       <input type="text" class="form-control" id="nc_title" name="nc_title" placeholder="Type title here" cols="40" rows="5" style="resize:vertical;" required>
+                    </div>
+
+                    <div class="form-group">
+                       <label for="operator_auditee">Operator Auditee</label>
+                        <input type="text" class="form-control" id="nc_operator_auditee" name="nc_operator_auditee" placeholder="Type operator auditee here" cols="40" rows="5" style="resize:vertical;" required>
+                    </div>
+
+                    <div class="form-group">
+                       <label for="number">Number</label>
+                        <input type="number" class="form-control" id="nc_number" name="nc_number" placeholder="Type NC number here" cols="40" rows="5" style="resize:vertical;" required>
+                    </div>
+
+                    <div class="form-group">
+                       <label for="date">Date</label>
+                         <div class="input-group">
+                           <div class="input-group-addon">
+                            <i class="fa fa-calendar">
+                            </i>
+                           </div>
+                           <input class="form-control" id="nc_date" name="nc_date" placeholder="MM/DD/YYYY" type="text" required/>
+                          </div>
+                    </div>
+
+                    <div class="form-group">
+                       <label for="status">Status</label>
+                         <select id="nc_status" name="nc_status" class="form-control" required>
+                          <option value="Opened">Opened</option>
+                          <option value="Closed">Closed</option>
+                        </select>
+                    </div>
+
+
+                    <div class="form-group">
+                       <label for="agreed_date_forCAP">Agreed date for CAP  (Corrective Action Plan)</label>
+                         <div class="input-group">
+                           <div class="input-group-addon">
+                            <i class="fa fa-calendar">
+                            </i>
+                           </div>
+                           <input class="form-control" id="nc_agreed_date_for_CAP" name="nc_agreed_date_for_CAP" placeholder="MM/DD/YYYY" type="text" required/>
+                          </div>
+                    </div>
+
+                    <div class="form-group">
+                       <label id="fref_num" for="level">Level</label>
+                        <input type="number" class="form-control" id="nc_level" name="nc_level" placeholder="Type level here" cols="40" rows="5" style="resize:vertical;">
+                    </div>
+
+                    <div class="form-group">
+                       <label for="due_date">Due date</label>
+                         <div class="input-group">
+                           <div class="input-group-addon">
+                            <i class="fa fa-calendar">
+                            </i>
+                           </div>
+                           <input class="form-control" id="nc_due_date" name="nc_due_date" placeholder="MM/DD/YYYY" type="text" required/>
+                          </div>
+                    </div>
+
+                    <div class="form-group">
+                       <label for="closure_date">Closure date</label>
+                         <div class="input-group">
+                           <div class="input-group-addon">
+                            <i class="fa fa-calendar">
+                            </i>
+                           </div>
+                           <input class="form-control" id="nc_closure_date" name="nc_closure_date" placeholder="MM/DD/YYYY" type="text" required/>
+                          </div>
+                    </div>
+
+                    <div class="form-group">
+                       <label for="requirement_references">Requirement references</label>
+                        <input type="text" class="form-control" id="nc_requirement_references" name="nc_requirement_references" placeholder="Type requirement references here" cols="40" rows="5" style="resize:vertical;" required>
+                    </div>
+
+                    <div class="form-group">
+                       <label for="further_references">Further references</label>
+                        <input type="text" class="form-control" id="nc_further_references" name="nc_further_references" placeholder="Type references here" cols="40" rows="5" style="resize:vertical;" required>
+                    </div>
+
+                    <div class="form-group">
+                       <label for="auditor_ofcaa">Auditor of CAA</label>
+                        <input type="text" class="form-control" id="nc_auditor_ofcaa" name="nc_auditor_ofcaa" placeholder="Type auditor of CAA here" cols="40" rows="5" style="resize:vertical;" required>
+                    </div>
+
+
+                    <div class="form-group">
+                       <label for="auditee_responsible_forCAP">Auditee responsible for CAP  (Corrective Action Plan)</label>
+                       <input type="text" class="form-control" id="nc_auditee_rfCAP" name="nc_auditee_rfCAP" placeholder="Type auditee here" cols="40" rows="5" style="resize:vertical;" required>
+                    </div>
+
+                    <div class="form-group">
+                       <label for="requirement_references">Requirement references</label>
+                       <textarea class="form-control" id="requirement_references" name="requirement_references" placeholder="Type references here" cols="40" rows="5" style="resize:vertical;" required></textarea>
+                    </div>
+
+                    <div class="form-group">
+                       <label for="details">NC Details</label>
+                       <textarea class="form-control" id="nc_details" name="nc_details" placeholder="Type NC details here" cols="40" rows="5" style="resize:vertical;" required></textarea>
+                    </div>
+
+                    <div id="fielda">
+                        <!--end field-->
+                    </div>
+                    <hr/>
+                    <hr/>
+
+                     <div class="form-group">
+                         <input type="submit" value="Submit">
+                     </div>
+
+            </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

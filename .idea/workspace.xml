@@ -1,0 +1,918 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="54ad3af6-b50f-45e7-9709-e8369fc5bb62" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Flask-WTF-0.14.2/docs/_static/flask-wtf.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Flask-WTF-0.14.2/tests/flask.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/static/admin_dashboard/font-awesome/fonts/FontAwesome.otf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/static/admin_dashboard/font-awesome/fonts/fontawesome-webfont.eot" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/static/admin_dashboard/font-awesome/fonts/fontawesome-webfont.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/static/admin_dashboard/font-awesome/fonts/fontawesome-webfont.woff" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/static/admin_dashboard/fonts/glyphicons-halflings-regular.eot" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/static/admin_dashboard/fonts/glyphicons-halflings-regular.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/static/admin_dashboard/fonts/glyphicons-halflings-regular.woff" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/static/admin_dashboard/fonts/glyphicons-halflings-regular.woff2" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/static/admin_dashboard/img/CAAlogo.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/static/admin_dashboard/img/Logo.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/static/admin_dashboard/img/LogoCAA.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/static/admin_dashboard/img/Screenshot from 2017-06-25 21-24-29.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/static/admin_dashboard/img/logoCAA.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/codeStyleSettings.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/techstitution.iml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Flask-WTF-0.14.2/AUTHORS" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Flask-WTF-0.14.2/Flask_WTF.egg-info/PKG-INFO" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Flask-WTF-0.14.2/Flask_WTF.egg-info/SOURCES.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Flask-WTF-0.14.2/Flask_WTF.egg-info/dependency_links.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Flask-WTF-0.14.2/Flask_WTF.egg-info/not-zip-safe" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Flask-WTF-0.14.2/Flask_WTF.egg-info/requires.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Flask-WTF-0.14.2/Flask_WTF.egg-info/top_level.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Flask-WTF-0.14.2/LICENSE" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Flask-WTF-0.14.2/MANIFEST.in" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Flask-WTF-0.14.2/PKG-INFO" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Flask-WTF-0.14.2/README.rst" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Flask-WTF-0.14.2/docs/Makefile" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Flask-WTF-0.14.2/docs/_templates/brand.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Flask-WTF-0.14.2/docs/_templates/useful-links.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Flask-WTF-0.14.2/docs/_themes/LICENSE" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Flask-WTF-0.14.2/docs/_themes/README.rst" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Flask-WTF-0.14.2/docs/_themes/flask/layout.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Flask-WTF-0.14.2/docs/_themes/flask/relations.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Flask-WTF-0.14.2/docs/_themes/flask/static/flasky.css_t" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Flask-WTF-0.14.2/docs/_themes/flask/theme.conf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Flask-WTF-0.14.2/docs/_themes/flask_small/layout.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Flask-WTF-0.14.2/docs/_themes/flask_small/static/flasky.css_t" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Flask-WTF-0.14.2/docs/_themes/flask_small/theme.conf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Flask-WTF-0.14.2/docs/_themes/flask_theme_support.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Flask-WTF-0.14.2/docs/api.rst" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Flask-WTF-0.14.2/docs/authors.rst" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Flask-WTF-0.14.2/docs/changelog.rst" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Flask-WTF-0.14.2/docs/conf.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Flask-WTF-0.14.2/docs/config.rst" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Flask-WTF-0.14.2/docs/csrf.rst" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Flask-WTF-0.14.2/docs/form.rst" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Flask-WTF-0.14.2/docs/index.rst" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Flask-WTF-0.14.2/docs/install.rst" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Flask-WTF-0.14.2/docs/license.rst" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Flask-WTF-0.14.2/docs/make.bat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Flask-WTF-0.14.2/docs/quickstart.rst" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Flask-WTF-0.14.2/docs/upgrade.rst" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Flask-WTF-0.14.2/flask_wtf/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Flask-WTF-0.14.2/flask_wtf/_compat.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Flask-WTF-0.14.2/flask_wtf/csrf.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Flask-WTF-0.14.2/flask_wtf/file.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Flask-WTF-0.14.2/flask_wtf/form.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Flask-WTF-0.14.2/flask_wtf/html5.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Flask-WTF-0.14.2/flask_wtf/i18n.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Flask-WTF-0.14.2/flask_wtf/recaptcha/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Flask-WTF-0.14.2/flask_wtf/recaptcha/fields.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Flask-WTF-0.14.2/flask_wtf/recaptcha/validators.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Flask-WTF-0.14.2/flask_wtf/recaptcha/widgets.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Flask-WTF-0.14.2/setup.cfg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Flask-WTF-0.14.2/setup.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Flask-WTF-0.14.2/test-requirements.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Flask-WTF-0.14.2/tests/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Flask-WTF-0.14.2/tests/base.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Flask-WTF-0.14.2/tests/flask.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Flask-WTF-0.14.2/tests/templates/csrf.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Flask-WTF-0.14.2/tests/templates/csrf_macro.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Flask-WTF-0.14.2/tests/templates/hidden.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Flask-WTF-0.14.2/tests/templates/import_csrf.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Flask-WTF-0.14.2/tests/templates/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Flask-WTF-0.14.2/tests/templates/recaptcha.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Flask-WTF-0.14.2/tests/templates/upload.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Flask-WTF-0.14.2/tests/test_csrf.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Flask-WTF-0.14.2/tests/test_deprecated.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Flask-WTF-0.14.2/tests/test_i18n.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Flask-WTF-0.14.2/tests/test_recaptcha.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Flask-WTF-0.14.2/tests/test_uploads.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Flask-WTF-0.14.2/tests/test_validation.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Flask-WTF-0.14.2/tox.ini" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/static/admin_dashboard/css/bootstrap-rtl.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/static/admin_dashboard/css/bootstrap-rtl.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/static/admin_dashboard/css/bootstrap.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/static/admin_dashboard/css/bootstrap.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/static/admin_dashboard/css/mainapp.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/static/admin_dashboard/css/plugins/morris.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/static/admin_dashboard/css/sb-admin-rtl.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/static/admin_dashboard/css/sb-admin.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/static/admin_dashboard/font-awesome/css/font-awesome.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/static/admin_dashboard/font-awesome/css/font-awesome.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/static/admin_dashboard/font-awesome/fonts/fontawesome-webfont.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/static/admin_dashboard/font-awesome/less/bordered-pulled.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/static/admin_dashboard/font-awesome/less/core.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/static/admin_dashboard/font-awesome/less/fixed-width.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/static/admin_dashboard/font-awesome/less/font-awesome.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/static/admin_dashboard/font-awesome/less/icons.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/static/admin_dashboard/font-awesome/less/larger.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/static/admin_dashboard/font-awesome/less/list.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/static/admin_dashboard/font-awesome/less/mixins.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/static/admin_dashboard/font-awesome/less/path.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/static/admin_dashboard/font-awesome/less/rotated-flipped.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/static/admin_dashboard/font-awesome/less/spinning.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/static/admin_dashboard/font-awesome/less/stacked.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/static/admin_dashboard/font-awesome/less/variables.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/static/admin_dashboard/font-awesome/scss/_bordered-pulled.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/static/admin_dashboard/font-awesome/scss/_core.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/static/admin_dashboard/font-awesome/scss/_fixed-width.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/static/admin_dashboard/font-awesome/scss/_icons.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/static/admin_dashboard/font-awesome/scss/_larger.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/static/admin_dashboard/font-awesome/scss/_list.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/static/admin_dashboard/font-awesome/scss/_mixins.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/static/admin_dashboard/font-awesome/scss/_path.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/static/admin_dashboard/font-awesome/scss/_rotated-flipped.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/static/admin_dashboard/font-awesome/scss/_spinning.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/static/admin_dashboard/font-awesome/scss/_stacked.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/static/admin_dashboard/font-awesome/scss/_variables.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/static/admin_dashboard/font-awesome/scss/font-awesome.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/static/admin_dashboard/fonts/glyphicons-halflings-regular.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/static/admin_dashboard/js/bootstrap.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/static/admin_dashboard/js/bootstrap.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/static/admin_dashboard/js/jquery.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/static/admin_dashboard/js/plugins/flot/excanvas.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/static/admin_dashboard/js/plugins/flot/flot-data.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/static/admin_dashboard/js/plugins/flot/jquery.flot.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/static/admin_dashboard/js/plugins/flot/jquery.flot.pie.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/static/admin_dashboard/js/plugins/flot/jquery.flot.resize.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/static/admin_dashboard/js/plugins/flot/jquery.flot.tooltip.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/static/admin_dashboard/js/plugins/morris/morris-data.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/static/admin_dashboard/js/plugins/morris/morris.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/static/admin_dashboard/js/plugins/morris/morris.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/static/admin_dashboard/js/plugins/morris/raphael.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/templates/documentation/css/documentation.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/templates/documentation/documentation.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/templates/layout1.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/templates/mod_main/_formhelpers.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/templates/mod_main/add_audit.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/templates/mod_main/add_audit_form.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/templates/mod_main/add_ca_form.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/templates/mod_main/add_nc_form.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/templates/mod_main/add_people_form.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/templates/mod_main/audit_details.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/templates/mod_main/audit_edit.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/templates/mod_main/audit_list.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/templates/mod_main/blank-page.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/templates/mod_main/changelog.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/templates/mod_main/corrective_actions.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/templates/mod_main/dashboard.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/templates/mod_main/login.html" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/templates/layout.html" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/__init__.py" afterPath="$PROJECT_DIR$/app/__init__.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/mod_main/views.py" afterPath="$PROJECT_DIR$/app/mod_main/views.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/templates/mod_main/index.html" afterPath="$PROJECT_DIR$/app/templates/mod_main/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/requirements.txt" afterPath="$PROJECT_DIR$/requirements.txt" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FavoritesManager">
+    <favorites_list name="techstitution" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/mod_main/views.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-2016">
+              <caret line="32" column="8" lean-forward="false" selection-start-line="32" selection-start-column="8" selection-end-line="32" selection-end-column="8" />
+              <folding>
+                <element signature="e#0#98#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>audit_date</find>
+      <find>form-group</find>
+      <find>buildyourform</find>
+      <find>preview</find>
+      <find>#add</find>
+      <find>buildyourform_onauditscope</find>
+      <find>preview_onauditscope</find>
+      <find>add_ondocumentreview</find>
+      <find>preview_ondocumentreview</find>
+      <find>.add</find>
+      <find>add</find>
+      <find>fieldname</find>
+      <find>fieldtype</find>
+      <find>fieldset</find>
+      <find>id</find>
+      <find>audit_frefnum</find>
+      <find>form-control</find>
+      <find>dashboard</find>
+      <find>new</find>
+      <find>display</find>
+      <find>edit</find>
+      <find>submit</find>
+      <find>new_audit_header</find>
+      <find>add_audit_form</find>
+      <find>name</find>
+      <find>form</find>
+      <find>update</find>
+      <find>main.ta</find>
+      <find>main.ch</find>
+      <find>nonconformities</find>
+    </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/app/templates/mod_main/layout.html" />
+        <option value="$PROJECT_DIR$/app/templates/mod_main/maps.html" />
+        <option value="$PROJECT_DIR$/app/templates/mod_main/notifications.html" />
+        <option value="$PROJECT_DIR$/app/templates/mod_main/table.html" />
+        <option value="$PROJECT_DIR$/app/templates/mod_main/template.html" />
+        <option value="$PROJECT_DIR$/app/templates/mod_main/typography.html" />
+        <option value="$PROJECT_DIR$/app/templates/mod_main/upgrade.html" />
+        <option value="$PROJECT_DIR$/app/templates/mod_main/icons.html" />
+        <option value="$PROJECT_DIR$/app/templates/mod_main/user.html" />
+        <option value="$PROJECT_DIR$/app/templates/mod_main1/forms.html" />
+        <option value="$PROJECT_DIR$/app/templates/mod_main1/blank-page.html" />
+        <option value="$PROJECT_DIR$/app/templates/mod_main1/bootstrap-elements.html" />
+        <option value="$PROJECT_DIR$/app/templates/mod_main1/bootstrap-grid.html" />
+        <option value="$PROJECT_DIR$/app/templates/mod_main1/tables.html" />
+        <option value="$PROJECT_DIR$/app/mod_main1/mod_main1.py" />
+        <option value="$PROJECT_DIR$/app/mod_main1/shtesa" />
+        <option value="$PROJECT_DIR$/app/mod_main1/views1.py" />
+        <option value="$PROJECT_DIR$/app/mod_main1/views.py" />
+        <option value="$PROJECT_DIR$/app/templates/mod_main1/charts.html" />
+        <option value="$PROJECT_DIR$/app/templates/mod_main1/index.html" />
+        <option value="$PROJECT_DIR$/app/templates/mod_main1/index-rtl.html" />
+        <option value="$PROJECT_DIR$/app/templates/mod_main/paper_dashboard/dashboard.html" />
+        <option value="$PROJECT_DIR$/app/templates/mod_main/paper_dashboard/user.html" />
+        <option value="$PROJECT_DIR$/app/templates/mod_main/tables.html" />
+        <option value="$PROJECT_DIR$/app/templates/mod_main/bootstrap-elements.html" />
+        <option value="$PROJECT_DIR$/app/templates/mod_main/forms.html" />
+        <option value="$PROJECT_DIR$/app/templates/mod_main/bootstrap-grid.html" />
+        <option value="$PROJECT_DIR$/app/templates/mod_main/index-rtl.html" />
+        <option value="$PROJECT_DIR$/app/templates/mod_main/add_people_form.html" />
+        <option value="$PROJECT_DIR$/app/templates/layout.html" />
+        <option value="$PROJECT_DIR$/app/static/admin_dashboard/css/bootstrap.min.css" />
+        <option value="$PROJECT_DIR$/app/static/admin_dashboard/css/modmain" />
+        <option value="$PROJECT_DIR$/app/static/admin_dashboard/css/modmain.css" />
+        <option value="$PROJECT_DIR$/app/static/admin_dashboard/css/mainapp" />
+        <option value="$PROJECT_DIR$/app/templates/mod_main/login.html" />
+        <option value="$PROJECT_DIR$/app/templates/layout1.html" />
+        <option value="$PROJECT_DIR$/app/templates/mod_main/audit_list.html" />
+        <option value="$PROJECT_DIR$/app/templates/mod_main/index.html" />
+        <option value="$PROJECT_DIR$/app/templates/mod_main/add_audit.html" />
+        <option value="$PROJECT_DIR$/app/templates/mod_main/charts.html" />
+        <option value="$PROJECT_DIR$/app/static/admin_dashboard/css/sb-admin.css" />
+        <option value="$PROJECT_DIR$/app/templates/mod_main/audit_edit.html" />
+        <option value="$PROJECT_DIR$/app/templates/mod_main/add_ca_form.html" />
+        <option value="$PROJECT_DIR$/app/templates/mod_main/corrective_actions.html" />
+        <option value="$PROJECT_DIR$/app/static/admin_dashboard/css/mainapp.css" />
+        <option value="$PROJECT_DIR$/app/templates/mod_main/blank-page.html" />
+        <option value="$PROJECT_DIR$/app/templates/mod_main/add_nc_form.html" />
+        <option value="$PROJECT_DIR$/app/templates/mod_main/add_audit_form.html" />
+        <option value="$PROJECT_DIR$/app/templates/mod_main/dashboard.html" />
+        <option value="$PROJECT_DIR$/app/mod_main/views.py" />
+        <option value="$PROJECT_DIR$/app/templates/mod_main/audit_details.html" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="64" />
+    <option name="y" value="-11" />
+    <option name="width" value="1303" />
+    <option name="height" value="780" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="techstitution" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="techstitution" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="techstitution" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="techstitution" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="techstitution" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="techstitution" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="utils" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="techstitution" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="techstitution" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="templates" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="techstitution" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="techstitution" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="templates" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mod_main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="techstitution" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="techstitution" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="static" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="admin_dashboard" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="techstitution" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="techstitution" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="static" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="admin_dashboard" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="img" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="techstitution" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="techstitution" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="static" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="admin_dashboard" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="css" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scratches" />
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="reference.settings.ide.settings.web.browsers" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/static/admin_dashboard/img" />
+      <recent name="$PROJECT_DIR$/app/static/admin_dashboard/css" />
+      <recent name="$PROJECT_DIR$/app/templates/mod_main1" />
+      <recent name="$PROJECT_DIR$/app/documentation" />
+      <recent name="$PROJECT_DIR$/app/templates/mod_main" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/templates/mod_main" />
+      <recent name="$PROJECT_DIR$/app/static/admin_dashboard" />
+      <recent name="$PROJECT_DIR$/app/static/paper_dashboard" />
+      <recent name="$PROJECT_DIR$/app/static" />
+      <recent name="$PROJECT_DIR$/app/templates/mod_main/paper_dashboard" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Python.run">
+    <configuration default="false" name="run" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="techstitution" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/run.py" />
+      <option name="PARAMETERS" value="--debug" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="PythonConfigurationType" factoryName="Python">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="techstitution" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="Tox" factoryName="Tox">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="techstitution" />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Doctests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="techstitution" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Unittests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="techstitution" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;.&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method />
+    </configuration>
+    <list size="1">
+      <item index="0" class="java.lang.String" itemvalue="Python.run" />
+    </list>
+    <recent_temporary>
+      <list size="1">
+        <item index="0" class="java.lang.String" itemvalue="Python.run" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="54ad3af6-b50f-45e7-9709-e8369fc5bb62" name="Default" comment="" />
+      <created>1497094404784</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1497094404784</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="64" y="-11" width="1303" height="780" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22709164" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32972136" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32884902" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32817337" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28018576" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32972136" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32817337" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.css" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager />
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/app/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="907">
+          <caret line="94" column="0" lean-forward="false" selection-start-line="94" selection-start-column="0" selection-end-line="94" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/run.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/templates/mod_main/_formhelpers.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="21" lean-forward="false" selection-start-line="0" selection-start-column="9" selection-end-line="0" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/static/admin_dashboard/js1/plugins/morris/morris.min.js" />
+    <entry file="file://$PROJECT_DIR$/app/templates/mod_main1/index1.html" />
+    <entry file="file://$PROJECT_DIR$/app/mod_main/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/mod_main1/shtesa" />
+    <entry file="file://$PROJECT_DIR$/app/mod_main1/mod_main1.py" />
+    <entry file="file://$PROJECT_DIR$/app/mod_api/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/mod_main1/views1.py" />
+    <entry file="file://$PROJECT_DIR$/app/mod_main1/views.py" />
+    <entry file="file://$PROJECT_DIR$/app/templates/mod_main/paper_dashboard/icons.html" />
+    <entry file="file://$PROJECT_DIR$/app/templates/mod_main/paper_dashboard/notifications.html" />
+    <entry file="file://$PROJECT_DIR$/app/templates/mod_main/paper_dashboard/maps.html" />
+    <entry file="file://$PROJECT_DIR$/app/templates/mod_main1/index.html" />
+    <entry file="file://$PROJECT_DIR$/app/templates/mod_main/paper_dashboard/user.html" />
+    <entry file="file://$PROJECT_DIR$/app/templates/mod_main/paper_dashboard/dashboard.html" />
+    <entry file="file://$PROJECT_DIR$/app/templates/mod_main/tables.html" />
+    <entry file="file://$PROJECT_DIR$/app/templates/mod_main/forms.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="155" column="59" lean-forward="false" selection-start-line="155" selection-start-column="59" selection-end-line="155" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/templates/mod_main/bootstrap-elements.html" />
+    <entry file="file://$PROJECT_DIR$/app/templates/mod_main/bootstrap-grid.html" />
+    <entry file="file://$PROJECT_DIR$/app/templates/mod_main/index-rtl.html" />
+    <entry file="file://$PROJECT_DIR$/app/templates/layout.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="183">
+          <caret line="25" column="0" lean-forward="true" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/static/admin_dashboard/css/mod_main" />
+    <entry file="file://$PROJECT_DIR$/app/static/admin_dashboard/css/plugins/morris.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/static/admin_dashboard/css/modmain.css" />
+    <entry file="file://$PROJECT_DIR$/app/static/admin_dashboard/css/bootstrap.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/static/admin_dashboard/css/sb-admin-rtl.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/static/admin_dashboard/css/bootstrap.min.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="299">
+          <caret line="4" column="69104" lean-forward="false" selection-start-line="4" selection-start-column="69043" selection-end-line="4" selection-end-column="69104" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/static/admin_dashboard/img/CAAlogo.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/static/admin_dashboard/img/Logo.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/static/admin_dashboard/img/logoCAA.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/static/admin_dashboard/img/LogoCAA.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/templates/mod_main/audit_list.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="764">
+          <caret line="132" column="36" lean-forward="true" selection-start-line="132" selection-start-column="36" selection-end-line="132" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/templates/layout1.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="53" column="0" lean-forward="true" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/templates/mod_main/add_audit.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="386">
+          <caret line="72" column="80" lean-forward="false" selection-start-line="72" selection-start-column="80" selection-end-line="72" selection-end-column="80" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/templates/mod_main/add_people_form.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="62" column="0" lean-forward="true" selection-start-line="62" selection-start-column="0" selection-end-line="62" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/templates/mod_main/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-13">
+          <caret line="30" column="24" lean-forward="false" selection-start-line="30" selection-start-column="24" selection-end-line="30" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/templates/mod_main/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="52" column="20" lean-forward="true" selection-start-line="52" selection-start-column="20" selection-end-line="52" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/static/admin_dashboard/css/sb-admin.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="197">
+          <caret line="89" column="8" lean-forward="false" selection-start-line="89" selection-start-column="8" selection-end-line="89" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/templates/mod_main/add_ca_form.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="461">
+          <caret line="188" column="44" lean-forward="true" selection-start-line="188" selection-start-column="44" selection-end-line="188" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/templates/mod_main/audit_edit.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="226" column="58" lean-forward="false" selection-start-line="226" selection-start-column="58" selection-end-line="226" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/static/admin_dashboard/css/mainapp.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="16" column="18" lean-forward="true" selection-start-line="16" selection-start-column="18" selection-end-line="16" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/templates/mod_main/blank-page.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18">
+          <caret line="1" column="28" lean-forward="true" selection-start-line="1" selection-start-column="28" selection-end-line="1" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/templates/mod_main/corrective_actions.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2434">
+          <caret line="140" column="25" lean-forward="false" selection-start-line="140" selection-start-column="25" selection-end-line="140" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/templates/mod_main/add_audit_form.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="98" column="13" lean-forward="false" selection-start-line="98" selection-start-column="13" selection-end-line="98" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/templates/mod_main/dashboard.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="333" column="20" lean-forward="false" selection-start-line="333" selection-start-column="16" selection-end-line="344" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/templates/mod_main/add_nc_form.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="16">
+          <caret line="222" column="32" lean-forward="true" selection-start-line="222" selection-start-column="32" selection-end-line="222" selection-end-column="32" />
+          <folding>
+            <element signature="n#style#0;n#input#0;n#div#6;n#form#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/templates/mod_main/audit_details.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="241">
+          <caret line="299" column="52" lean-forward="true" selection-start-line="299" selection-start-column="52" selection-end-line="299" selection-end-column="52" />
+          <folding>
+            <element signature="n#style#0;n#form#0;n#td#5;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/static/admin_dashboard/img/Screenshot from 2017-06-25 21-24-29.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/mod_main/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2016">
+          <caret line="32" column="8" lean-forward="false" selection-start-line="32" selection-start-column="8" selection-end-line="32" selection-end-column="8" />
+          <folding>
+            <element signature="e#0#98#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

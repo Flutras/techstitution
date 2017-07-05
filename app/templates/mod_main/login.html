@@ -1,0 +1,67 @@
+{% extends 'layout1.html' %}
+<!-- The form in HTML -->
+{% block content %}
+
+<script type="text/javascript">
+   $(document).ready(function() {
+    // bind the form submit event to our function
+    $("#loginForm").on('submit', function(e) {
+        // prevent page refresh
+        e.preventDefault();
+        // post the data
+        var ajax=$.ajax({
+            type: "POST",
+            data: $("#loginForm").serialize(),
+            url: '{{ url_for("main.login") }}'
+        }).done(function(data){
+            console.log('done!')
+        });
+        ajax.fail(function(data){
+            console.log('error!');
+        });
+    });
+});
+</script>
+
+
+<div class="container login">
+    <header class="col-xs-12 col-sm-12 col-md-12 col-lg-12" id="login_header">
+	    		<div class="col-md-offset-4 col-md-4">
+                    <a href="http://caa-ks.org">
+                        <img src="{{ url_for('static', filename='admin_dashboard/img/logoCAA.png') }}" class="logo col-sm-12 col-md-8 col-lg-7">
+                    </a>
+                </div>
+    </header>
+
+    <div class="col-md-offset-4 col-md-4">
+        <div class="login-panel panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">Sign In</h3>
+            </div>
+            <div class="panel-body">
+                <form role="form" id="loginForm" method="POST" action="{{url_for('main.login')}}">
+                    <fieldset>
+                        <div class="form-group">
+                            Username<input class="form-control" placeholder="username" name="username" type="text" autofocus="">
+                        </div>
+                        <div class="form-group">
+                            Password<input class="form-control" placeholder="password" name="password" type="password" value="">
+                        </div>
+                        <div class="checkbox">
+                            <label>
+                                <input name="remember" type="checkbox" value="Remember Me">Remember Me
+                            </label>
+                        </div>
+                        <!-- Change this to a button or input when using this as a form -->
+                        <button type="submit"  class="btn btn-sm btn-success">Login</button>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+
+{% endblock %}
